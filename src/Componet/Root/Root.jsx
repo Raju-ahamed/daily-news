@@ -2,6 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router';
 import Header from '../Header/Header';
 import LeatestNews from '../LatestNews/LeatestNews';
+import NavBar from '../NavBar/NavBar';
 
 
 const Root = () => {
@@ -9,7 +10,14 @@ const Root = () => {
         <div>
             <header>
                <Header></Header>
-               <LeatestNews></LeatestNews>
+               <section>
+                    <LeatestNews></LeatestNews>
+               </section>
+               <nav className='w-11/12 mx-auto'>
+                <NavBar>
+
+                </NavBar>
+               </nav>
             </header>
             <main>
                 <Outlet></Outlet>

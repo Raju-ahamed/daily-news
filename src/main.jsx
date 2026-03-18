@@ -1,10 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import Root from './Componet/Root/Root.jsx'
-import NavBar from './Componet/NavBar/NavBar.jsx'
+import Home from './Componet/Home/Home.jsx'
 
 
 const router = createBrowserRouter([
@@ -12,7 +11,7 @@ const router = createBrowserRouter([
     path: "/",
     Component: Root,
     children: [
-      { index: true, Component: NavBar }
+      { index: true, Component: Home }
     ]
   },
 ]);
