@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import Root from './Componet/Root/Root.jsx'
 import Home from './Componet/Home/Home.jsx'
 import About from './Componet/About/About.jsx'
+import CatagoryNews from './Componet/Page/CatagoryNews.jsx'
 
 
 const router = createBrowserRouter([
@@ -13,9 +14,12 @@ const router = createBrowserRouter([
     Component: Root,
     children: [
       { index: true, Component: Home },
-      { path:"about", Component:About }
+      { path: "/catagory/:id", 
+        Component: CatagoryNews },
+
     ]
   },
+  // { path: "about", Component: About }
 ]);
 
 createRoot(document.getElementById('root')).render(
