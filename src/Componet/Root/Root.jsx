@@ -12,16 +12,16 @@ const Root = () => {
         <div>
             <header>
                 <Header></Header>
-                <section className='w-11/12 mx-auto'>
+                <section className='w-11/12 mx-auto my-3'>
                     <LeatestNews></LeatestNews>
                 </section>
-                <nav className='w-11/12 mx-auto'>
+                <nav className='w-11/12 mx-auto my-3'>
                     <NavBar>
 
                     </NavBar>
                 </nav>
             </header>
-            <main className='w-11/12 mx-auto grid grid-cols-12'>
+            <main className='w-11/12 mx-auto my-3 grid grid-cols-12'>
                 <aside className='col-span-3'>
                     <LeftAside></LeftAside>
                 </aside>
