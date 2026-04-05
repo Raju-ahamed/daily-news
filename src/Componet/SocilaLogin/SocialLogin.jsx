@@ -11,7 +11,7 @@ const SocialLogin = () => {
                     <FcGoogle size={24} /> Log in with Goggle
                 </button>
                 <button className='btn btn-primary btn-outline w-full'>
-                    <IoLogoGithub size={24} /> Log in with Github, plz
+                    <IoLogoGithub size={24} /> plz, Log in with Github
                 </button>
 
             </div>
