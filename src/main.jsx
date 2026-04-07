@@ -7,6 +7,7 @@ import Home from './Componet/Home/Home.jsx'
 import About from './Componet/About/About.jsx'
 import CatagoryNews from './Componet/Page/CatagoryNews.jsx'
 import Login from './Componet/Login/Login.jsx'
+import Register from './Componet/Register/Register.jsx'
 
 
 const router = createBrowserRouter([
@@ -23,7 +24,8 @@ const router = createBrowserRouter([
     ]
 
   },
-  { path: "/login", Component: Login }
+  { path: "/login", Component: Login },
+  { path: "/register", Component: Register }
 ]);
 
 createRoot(document.getElementById('root')).render(
