@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import Catagory from "../Catagory/Catagory";
+import News from "../News/News";
 
 
 const LeftAside = () => {
