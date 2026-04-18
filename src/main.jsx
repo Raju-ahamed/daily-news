@@ -18,6 +18,11 @@ const router = createBrowserRouter([
       { index: true, Component: Home },
       {
         path: "/catagory/:id",
+        loader: async () => {
+          const res = await fetch('/news.json');
+          const data = await res.json();
+          return data;
+        },
         Component: CatagoryNews
       },
 
