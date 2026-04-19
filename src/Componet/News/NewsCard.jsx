@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 
 const NewsCard = ({news}) => {
     
@@ -33,9 +34,11 @@ const NewsCard = ({news}) => {
                             </p>
 
                             <div className="card-actions justify-end">
+                               <NavLink to={"/details"}>
                                 <button className="btn btn-primary btn-sm">
                                     Read More
                                 </button>
+                               </NavLink>
                             </div>
                         </div>
                     </div>

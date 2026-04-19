@@ -8,6 +8,7 @@ import About from './Componet/About/About.jsx'
 import CatagoryNews from './Componet/Page/CatagoryNews.jsx'
 import Login from './Componet/Login/Login.jsx'
 import Register from './Componet/Register/Register.jsx'
+import AuthProvider from './Componet/Context/AuthProvider.jsx'
 
 
 const router = createBrowserRouter([
@@ -35,7 +36,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
 
   </StrictMode>,
 )
