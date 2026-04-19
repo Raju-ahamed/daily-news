@@ -9,6 +9,7 @@ import CatagoryNews from './Componet/Page/CatagoryNews.jsx'
 import Login from './Componet/Login/Login.jsx'
 import Register from './Componet/Register/Register.jsx'
 import AuthProvider from './Componet/Context/AuthProvider.jsx'
+import Details from './Componet/Details/Details.jsx'
 
 
 const router = createBrowserRouter([
@@ -26,9 +27,14 @@ const router = createBrowserRouter([
         },
         Component: CatagoryNews
       },
+      
 
     ]
 
+  },
+  {
+    path: "/details",
+    Component: Details
   },
   { path: "/login", Component: Login },
   { path: "/register", Component: Register }
