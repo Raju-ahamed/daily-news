@@ -5,13 +5,9 @@ import './NavBar.css'
 import { AuthContext } from '../Context/AuthProvider';
 
 const NavBar = () => {
-    const { user, userLogOut } = useContext(AuthContext)
-    const hangleSginOut = () => {
-        userLogOut().then(data => {
-            console.log(data)
-        }).catch(err => {
-            console.log(err)
-        });
+    const { user, userLogOut } = useContext(AuthContext);
+    const handleSginOut = () => {
+        userLogOut().then().catch();
     }
     return (
         <div className='w-11/12 my-5 mx-auto  flex justify-between items-center'>
@@ -26,7 +22,9 @@ const NavBar = () => {
             <div className='flex gap-5'>
                 <img src={image} alt="" srcset="" />
                 {
-                    user ? <button onClick={hangleSginOut()} className='btn btn-primary px-4'>sign out</button> :
+                    user ?
+                        <button onClick={handleSginOut} className='btn btn-primary px-4'>sign out</button>
+                        :
                         <button className='btn btn-primary px-4'><NavLink to="/login">log in</NavLink></button>
                 }
             </div>

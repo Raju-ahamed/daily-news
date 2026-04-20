@@ -10,6 +10,7 @@ import Login from './Componet/Login/Login.jsx'
 import Register from './Componet/Register/Register.jsx'
 import AuthProvider from './Componet/Context/AuthProvider.jsx'
 import Details from './Componet/Details/Details.jsx'
+import PrivateRoute from './Componet/Private/PrivateRoute.jsx'
 
 
 const router = createBrowserRouter([
@@ -27,14 +28,14 @@ const router = createBrowserRouter([
         },
         Component: CatagoryNews
       },
-      
+
 
     ]
 
   },
   {
     path: "/details",
-    Component: Details
+    element: <PrivateRoute><Details></Details></PrivateRoute>
   },
   { path: "/login", Component: Login },
   { path: "/register", Component: Register }
