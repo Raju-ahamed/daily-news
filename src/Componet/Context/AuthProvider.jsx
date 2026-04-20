@@ -1,5 +1,5 @@
-import React, { createContext, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import React, { createContext, useEffect, useState } from 'react';
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import app from '../../Firebase/fairbase.config';
 
 export const AuthContext = createContext(null);
@@ -15,10 +15,24 @@ const AuthProvider = ({ children }) => {
     const userLogIn = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password);
     }
+    const userLogOut = () => {
+        return signOut(auth);
+    }
+
+
+    useEffect(() => {
+        const unSubscribe = onAuthStateChanged(auth, currentUser => {
+            setUser(currentUser);
+        });
+        return () => {
+            unSubscribe();
+        }
+    }, [])
     const userInfo = {
         user,
         userLogIn,
-        creatUser
+        creatUser,
+        userLogOut
     }
 
     return (
