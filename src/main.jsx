@@ -28,13 +28,10 @@ const router = createBrowserRouter([
         },
         Component: CatagoryNews
       },
-
-
     ]
-
   },
   {
-    path: "/details",
+    path: "/details/:id",
     element: <PrivateRoute><Details></Details></PrivateRoute>
   },
   { path: "/login", Component: Login },

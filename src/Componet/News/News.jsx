@@ -9,7 +9,6 @@ const News = () => {
             .then(data => setNewses(data))
 
     }, [])
-    console.log(newses.length)
     return (
         <div>
             {

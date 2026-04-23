@@ -6,7 +6,6 @@ import './Catagory.css'
 const catagoryPromise = fetch('/categories.json').then(res => res.json())
 const Catagory = () => {
     const catagories = use(catagoryPromise)
-    console.log(catagories)
     return (
         <div>
             <h2 className='font-bold'>All Catagory</h2>
